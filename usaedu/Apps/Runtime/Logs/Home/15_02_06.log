@@ -1,0 +1,9 @@
+[ 2015-02-06T09:35:23+08:00 ] ::1 /tk-xm/usaedu/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000766s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000860s ]
+ERR: 模板不存在:./Apps/Home/View/default/Index/index.html
+

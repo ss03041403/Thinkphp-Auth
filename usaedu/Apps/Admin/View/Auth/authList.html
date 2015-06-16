@@ -1,0 +1,145 @@
+<extend name="Public/base"/>
+
+<block name="body">
+<style type="text/css">
+	.table-responsive{ overflow:visible;}
+</style>
+	<div class="page-content">
+		<div class="page-header">
+			<h1>
+				权限管理
+				<small>
+					<i class="icon-double-angle-right"></i>
+					 权限列表
+				</small>
+			</h1>
+		</div><!-- /.page-header -->
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="table-header">
+					权限列表
+				</div>
+
+				<div class="table-responsive">
+					<table class="table table-striped table-bordered table-hover" id="sample-table-1">
+						<thead>
+							<tr>
+								<th class="center">
+									<label>
+										<input type="checkbox" class="ace" />
+										<span class="lbl"></span>
+									</label>
+								</th>
+								<th>序号</th>
+								<th class="hidden-480">规则标识</th>
+								<th>规则简述</th>
+								<th class="hidden-480">附加条件</th>
+								<th class="hidden-480">所属模块</th>
+								<th>状态</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<volist name='data' id='v'>
+							<tr>
+								<td class="center">
+									<label>
+										<input type="checkbox" class="ace" />
+										<span class="lbl"></span>
+									</label>
+								</td>
+
+								<td>
+									{$v.id}
+								</td>
+								<td class="hidden-480">{$v.name}</td>
+								<td>{$v.title}</td>
+								<td class="hidden-480">{$v.term}</td>
+								<td class="hidden-480">{$v.moduleName}</td>
+								<td>
+									<if condition='!$v[status]'><button class="btn btn-minier btn-danger">关闭</button><else/><button class="btn btn-minier btn-success">开启</button></if>
+								</td>
+								<td>
+									<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+										
+										<a class="green" href="{:U('updateRule',array('id'=>$v['id']))}">
+											<i class="icon-pencil bigger-130"></i>
+										</a>
+
+										<a class="red" href="{:U('deleteRule',array('id'=>$v['id']))}" onclick='return del();'>
+											<i class="icon-trash bigger-130"></i>
+										</a>
+									</div>
+
+									<div class="visible-xs visible-sm hidden-md hidden-lg">
+										<div class="inline position-relative">
+											<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+												<i class="icon-caret-down icon-only bigger-120"></i>
+											</button>
+
+											<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+
+												<li>
+													<a href="{:U('updateRule',array('id'=>$v['id']))}" class="tooltip-success" data-rel="tooltip" title="Edit">
+														<span class="green">
+															<i class="icon-edit bigger-120"></i>
+														</span>
+													</a>
+												</li>
+
+												<li>
+													<a href="{:U('deleteRule',array('id'=>$v['id']))}" class="tooltip-error" data-rel="tooltip" title="Delete" onclick='return del();'>
+														<span class="red">
+															<i class="icon-trash bigger-120"></i>
+														</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</td>
+							</tr>
+							</volist>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</block>
+
+<block name="bootscript">
+	<script src="__STATIC__/assets/js/jquery.dataTables.min.js"></script>
+	<script src="__STATIC__/assets/js/jquery.dataTables.bootstrap.js"></script>
+	<script type="text/javascript">
+	function del()
+	{
+	    if(confirm("确定要删除吗？"))
+	    {
+	        return true;
+	    }
+	    else
+	    {
+	        return false;
+	    }
+	}
+	</script>
+</block>
+
+<block name="script">
+<script type="text/javascript">
+	jQuery(function($) {
+		$('table th input:checkbox').on('click' , function(){
+			var that = this;
+			$(this).closest('table').find('tr > td:first-child input:checkbox')
+			.each(function(){
+				this.checked = that.checked;
+				$(this).closest('tr').toggleClass('selected');
+			});
+				
+		});
+	})
+</script>
+</block>

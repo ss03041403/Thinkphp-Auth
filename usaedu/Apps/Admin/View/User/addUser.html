@@ -1,0 +1,120 @@
+<extend name="Public/base"/>
+
+<block name="body">
+	<div class="page-content">
+		<div class="page-header">
+			<h1>
+				权限管理
+				<small>
+					<i class="icon-double-angle-right"></i>
+					 用户管理
+				</small>
+				<small>
+					<i class="icon-double-angle-right"></i>
+					 添加用户
+				</small>
+			</h1>
+		</div><!-- /.page-header -->
+
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="widget-header widget-header-blue widget-header-flat">
+					<h4 class="lighter">添加用户</h4>
+				</div>
+				<div class="widget-body">
+					<div class="widget-main">
+					<form method="post" action="{:U('User/addUserHandle')}" id="validation-form" class="form-horizontal" novalidate="novalidate">
+						<div class="form-group">
+							<label for="name" class="control-label col-xs-12 col-sm-3 no-padding-right">用户名:</label>
+
+							<div class="col-xs-12 col-sm-9">
+								<div class="clearfix">
+									<input type="text" class="col-xs-12 col-sm-4" id="name" name="username">
+								</div>
+							</div>
+						</div>
+
+						<div class="space-2"></div>
+
+						<div class="form-group">
+							<label for="password" class="control-label col-xs-12 col-sm-3 no-padding-right">密码:</label>
+
+							<div class="col-xs-12 col-sm-9">
+								<div class="clearfix">
+									<input type="password" class="col-xs-12 col-sm-4" id="password" name="password">
+								</div>
+							</div>
+						</div>
+
+						<div class="space-2"></div>
+
+						<div class="form-group">
+							<label for="password2" class="control-label col-xs-12 col-sm-3 no-padding-right">确认密码:</label>
+
+							<div class="col-xs-12 col-sm-9">
+								<div class="clearfix">
+									<input type="password" class="col-xs-12 col-sm-4" id="password2" name="repassword">
+								</div>
+							</div>
+						</div>
+
+						<div class="hr hr-dotted"></div>
+
+						<div class="form-group">
+							<label class="control-label col-xs-12 col-sm-3 no-padding-right">是否锁定用户:</label>
+
+							<div class="col-xs-12 col-sm-9">
+								<div>
+									<label class="blue">
+										<input type="radio" class="ace" value="1" name="lock" checked="checked">
+										<span class="lbl"> 开放</span>
+									</label>
+								</div>
+
+								<div>
+									<label class="blue">
+										<input type="radio" class="ace" value="0" name="lock">
+										<span class="lbl"> 锁定</span>
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="space-2"></div>
+
+						<div class="form-group">
+							<label for="platform" class="control-label col-xs-12 col-sm-3 no-padding-right">选择用户组:</label>
+
+							<div class="col-xs-12 col-sm-9">
+								<div class="clearfix">
+									<select name="role_id" id="platform" class="input-medium">
+										<option value="">------------------</option>
+										<volist name="group" id="vo">
+											<option value="{$vo['id']}" >{$vo['title']}</option>
+										</volist>
+									</select>
+								</div>
+							</div>
+						</div>					
+						
+						<div class="row-fluid wizard-actions">
+							<button data-last="Finish " class="btn btn-success btn-next">
+								保存添加
+							<i class="icon-arrow-right icon-on-right"></i></button>
+						</div>
+					</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</block>
+
+<block name="bootscript">
+
+</block>
+
+<block name="script">
+
+</block>

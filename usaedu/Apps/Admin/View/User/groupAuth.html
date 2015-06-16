@@ -1,0 +1,140 @@
+<extend name="Public/base"/>
+
+<block name="body">
+	<div class="page-content">
+		<div class="page-header">
+			<h1>
+				用户管理
+				<small>
+					<i class="icon-double-angle-right"></i>
+					 分配权限
+				</small>
+			</h1>
+		</div><!-- /.page-header -->
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="widget-header widget-header-blue widget-header-flat">
+					<h4 class="lighter">用户组权限设置---{$group['name']}</h4>
+				</div>
+				<form class="form-inline" action="{:U('groupSetHandle')}" method="post">
+					<input type="hidden" name="groupID" value='{$group["id"]}' />
+					<div class="panel-body">	
+						<div class="panel-group" id="accordionRule">
+							
+							<volist name="result" id="vo">
+								<div class="panel panel-primary">
+								    <div class="panel-heading">
+								     	<h4 class="panel-title">
+								     	<label class="checkbox-inline">
+								     		<input type='checkbox' class="moduleName" index="{$i}" len="0" />
+								     		<span data-toggle="collapse" data-toggle="collapse" data-parent="#accordionRule" href="#collapse{$i}">{$key}</span></label>
+								      	</h4>
+								    </div>
+								    <div>
+									      	<div class="panel-body">
+									         	<foreach name="vo" item="v">
+									         		<label class="checkbox-inline">
+									         			<input type='checkbox' name="rule[]" label="group{$i}" value="{$v['id']}" /> {$v['title']}
+									         		</label>
+									         	</foreach>
+									     	</div>
+								    </div>
+						  		</div>
+						  	</volist>		  	
+						</div>
+					</div>
+
+					<div class="panel-footer">
+						<div class="form-group">		
+								<button type="submit" class="btn btn-success btn-add">更新</button>
+						</div>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+</block>
+
+<block name="bootscript">
+<script type="text/javascript">
+	$(function(){
+		$('#collapseTwo').addClass('in');
+		$('#collapse1').addClass('in');
+		$('#collapseOne').removeClass('in');
+		$('#myTab a:first').tab('show');
+		//全选或反选操作
+		$(".moduleName").click(function(){
+			var index=$(this).attr('index');
+			//全选操作
+			if(this.checked){
+				//初始化len为空
+				var len=0;
+				//循环选择权限操作
+				$("input[label='group"+index+"']").each(function(i){
+					len++;					
+					this.checked=true;
+				});
+				$(this).attr('len',len)
+			//反选操作
+			}else{
+				$("input[label='group"+index+"']").removeAttr("checked");
+				$(this).attr("len",'0');
+			}
+		
+		});
+
+		//页面加载时运行时,显示对应角色的权限
+		var ruleID="{$ruleID[0]['rules']}";
+		var arr=ruleID.split(',');
+		//循环判断,有权限就选择
+		$("input[name='rule[]']").each(function(){	
+			//判断是否在数组中		
+			if($.inArray(this.value,arr)>=0){
+				$(this).prop('checked','true');
+				//获取当前label标签的最后一个数字,通过这个数字来获取相应的模块组
+				var label=$(this).attr('label').charAt(5);
+				//权限所在模块组
+				var grp=$('input[index="'+label+'"]');
+				//len属性默认为0,对len循环加1操作
+				var len=parseInt(grp.attr('len'))+1;
+				//改变len的值 
+				grp.attr('len',len);
+				//判断这模块组是否已经选择,如没有选择,则选上
+				if(!grp.prop('checked')){
+					grp.prop('checked','true');
+				}
+			}
+		});
+
+		//选择权限时,判断该权限所在的模块组是否选上
+		$("input[name='rule[]']").click(function(){
+			//获取当前label标签的最后一个数字,通过这个数字来获取相应的模块组
+			var label=$(this).attr('label').charAt(5);
+			//权限所在模块组
+			var grp=$('input[index="'+label+'"]');
+			//所在模块组已经选中的权限个数
+			var len=parseInt(grp.attr('len'));
+			if(this.checked){
+				//每选中一次,执行自加操作	
+				len++;
+				grp.attr('len',len);
+				if(!grp.prop('checked')){
+					//判断这模块组是否已经选择,如没有选择,则选上
+					grp.prop('checked','true');
+				}					
+			}else{
+				//每取消一次,执行自减操作
+				len--;
+				grp.attr('len',len);
+				//当被选择权限数为0时,移除模块组选择状态
+				len<=0?grp.removeProp('checked'):'';				
+			}				
+		});
+	});
+	</script>
+</block>
+
+<block name="script">
+
+</block>

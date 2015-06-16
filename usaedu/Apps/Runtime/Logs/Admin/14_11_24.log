@@ -1,0 +1,739 @@
+[ 2014-11-24T10:03:26+08:00 ] ::1 /tk-xm/usaedu/admin.php/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000083s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003714s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000548s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000935s ]
+NOTIC: [8] Undefined variable: meta_title H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\859e94050170c96367cb52465a51a945.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043954s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044341s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003365s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003733s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010578s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010994s ]
+
+[ 2014-11-24T10:07:03+08:00 ] ::1 /tk-xm/usaedu/admin.php/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000421s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000581s ]
+SQL: DESCRIBE tp_user [ RunTime:0.021079s ]
+SQL: SELECT `id`,`username`,`login_time`,`login_ip`,`lock`,`login_num`,`rsgtime` FROM `tp_user`  [ RunTime:0.000389s ]
+SQL: DESCRIBE tp_auth_group [ RunTime:0.006452s ]
+NOTIC: [8] Undefined index: mapping_order H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+SQL: SELECT b.* FROM tp_auth_group_access AS a, tp_auth_group AS b WHERE a.group_id = b.id AND a. uid='1' [ RunTime:0.011799s ]
+NOTIC: [8] Undefined index: mapping_order H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+SQL: SELECT b.* FROM tp_auth_group_access AS a, tp_auth_group AS b WHERE a.group_id = b.id AND a. uid='2' [ RunTime:0.000365s ]
+SQL: DESCRIBE tp_auth_group [ RunTime:0.004302s ]
+SQL: SELECT * FROM `tp_auth_group`  [ RunTime:0.000295s ]
+SQL: DESCRIBE tp_auth_rule [ RunTime:0.011148s ]
+SQL: SELECT * FROM `tp_auth_rule` WHERE `id` IN ('3','4','5','6','8','9','11','12','13','14','15','16','1','2','7','10','17','18','19','20')  [ RunTime:0.000353s ]
+SQL: SELECT * FROM `tp_auth_rule`  [ RunTime:0.000293s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000311s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000484s ]
+NOTIC: [8] Undefined variable: meta_title H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a92f1d2922506e26adc7a8e5abe56037.php 第 5 行.
+NOTIC: [8] Use of undefined constant lock - assumed 'lock' H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a92f1d2922506e26adc7a8e5abe56037.php 第 303 行.
+NOTIC: [8] Use of undefined constant lock - assumed 'lock' H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a92f1d2922506e26adc7a8e5abe56037.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021221s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021393s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000491s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000652s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000778s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000953s ]
+
+[ 2014-11-24T10:07:04+08:00 ] ::1 /tk-xm/usaedu/admin.php/User/addUser.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000401s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000469s ]
+SQL: DESCRIBE tp_auth_group [ RunTime:0.002257s ]
+SQL: SELECT `id`,`title` FROM `tp_auth_group`  [ RunTime:0.000147s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000256s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000342s ]
+NOTIC: [8] Undefined variable: meta_title H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\09755487b22a20bd2324b11c954f129c.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008519s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008608s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000232s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000313s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000338s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000422s ]
+
+[ 2014-11-24T10:07:04+08:00 ] ::1 /tk-xm/usaedu/admin.php/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000374s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000440s ]
+SQL: DESCRIBE tp_user [ RunTime:0.002326s ]
+SQL: SELECT `id`,`username`,`login_time`,`login_ip`,`lock`,`login_num`,`rsgtime` FROM `tp_user`  [ RunTime:0.000179s ]
+SQL: DESCRIBE tp_auth_group [ RunTime:0.002001s ]
+NOTIC: [8] Undefined index: mapping_order H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+SQL: SELECT b.* FROM tp_auth_group_access AS a, tp_auth_group AS b WHERE a.group_id = b.id AND a. uid='1' [ RunTime:0.000192s ]
+NOTIC: [8] Undefined index: mapping_order H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+SQL: SELECT b.* FROM tp_auth_group_access AS a, tp_auth_group AS b WHERE a.group_id = b.id AND a. uid='2' [ RunTime:0.000166s ]
+SQL: DESCRIBE tp_auth_group [ RunTime:0.002051s ]
+SQL: SELECT * FROM `tp_auth_group`  [ RunTime:0.000143s ]
+SQL: DESCRIBE tp_auth_rule [ RunTime:0.002045s ]
+SQL: SELECT * FROM `tp_auth_rule` WHERE `id` IN ('3','4','5','6','8','9','11','12','13','14','15','16','1','2','7','10','17','18','19','20')  [ RunTime:0.000166s ]
+SQL: SELECT * FROM `tp_auth_rule`  [ RunTime:0.000138s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000148s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000231s ]
+NOTIC: [8] Undefined variable: meta_title H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a92f1d2922506e26adc7a8e5abe56037.php 第 5 行.
+NOTIC: [8] Use of undefined constant lock - assumed 'lock' H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a92f1d2922506e26adc7a8e5abe56037.php 第 303 行.
+NOTIC: [8] Use of undefined constant lock - assumed 'lock' H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a92f1d2922506e26adc7a8e5abe56037.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009987s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010067s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000339s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000423s ]
+
+[ 2014-11-24T10:53:06+08:00 ] ::1 /tk-xm/usaedu/admin.php/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+SQL: DESCRIBE tp_user [ RunTime:0.002773s ]
+SQL: SELECT `id`,`username`,`login_time`,`login_ip`,`lock`,`login_num`,`rsgtime` FROM `tp_user`  [ RunTime:0.000243s ]
+SQL: DESCRIBE tp_auth_group [ RunTime:0.002347s ]
+NOTIC: [8] Undefined index: mapping_order H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+SQL: SELECT b.* FROM tp_auth_group_access AS a, tp_auth_group AS b WHERE a.group_id = b.id AND a. uid='1' [ RunTime:0.000269s ]
+NOTIC: [8] Undefined index: mapping_order H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+SQL: SELECT b.* FROM tp_auth_group_access AS a, tp_auth_group AS b WHERE a.group_id = b.id AND a. uid='2' [ RunTime:0.000198s ]
+SQL: DESCRIBE tp_auth_group [ RunTime:0.002273s ]
+SQL: SELECT * FROM `tp_auth_group`  [ RunTime:0.000143s ]
+SQL: DESCRIBE tp_auth_rule [ RunTime:0.002159s ]
+SQL: SELECT * FROM `tp_auth_rule` WHERE `id` IN ('3','4','5','6','8','9','11','12','13','14','15','16','1','2','7','10','17','18','19','20')  [ RunTime:0.000160s ]
+SQL: SELECT * FROM `tp_auth_rule`  [ RunTime:0.000134s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000155s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000238s ]
+NOTIC: [8] Undefined variable: meta_title H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a92f1d2922506e26adc7a8e5abe56037.php 第 5 行.
+NOTIC: [8] Use of undefined constant lock - assumed 'lock' H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a92f1d2922506e26adc7a8e5abe56037.php 第 303 行.
+NOTIC: [8] Use of undefined constant lock - assumed 'lock' H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a92f1d2922506e26adc7a8e5abe56037.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010566s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010647s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000269s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000359s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000423s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000538s ]
+
+[ 2014-11-24T10:53:07+08:00 ] ::1 /tk-xm/usaedu/admin.php/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000597s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000627s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000794s ]
+SQL: DESCRIBE tp_user [ RunTime:0.003658s ]
+SQL: SELECT `id`,`username`,`login_time`,`login_ip`,`lock`,`login_num`,`rsgtime` FROM `tp_user`  [ RunTime:0.000191s ]
+SQL: DESCRIBE tp_auth_group [ RunTime:0.002131s ]
+NOTIC: [8] Undefined index: mapping_order H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+SQL: SELECT b.* FROM tp_auth_group_access AS a, tp_auth_group AS b WHERE a.group_id = b.id AND a. uid='1' [ RunTime:0.000187s ]
+NOTIC: [8] Undefined index: mapping_order H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+SQL: SELECT b.* FROM tp_auth_group_access AS a, tp_auth_group AS b WHERE a.group_id = b.id AND a. uid='2' [ RunTime:0.000151s ]
+SQL: DESCRIBE tp_auth_group [ RunTime:0.002095s ]
+SQL: SELECT * FROM `tp_auth_group`  [ RunTime:0.000141s ]
+SQL: DESCRIBE tp_auth_rule [ RunTime:0.002112s ]
+SQL: SELECT * FROM `tp_auth_rule` WHERE `id` IN ('3','4','5','6','8','9','11','12','13','14','15','16','1','2','7','10','17','18','19','20')  [ RunTime:0.000173s ]
+SQL: SELECT * FROM `tp_auth_rule`  [ RunTime:0.000134s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000249s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000366s ]
+NOTIC: [8] Undefined variable: meta_title H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a92f1d2922506e26adc7a8e5abe56037.php 第 5 行.
+NOTIC: [8] Use of undefined constant lock - assumed 'lock' H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a92f1d2922506e26adc7a8e5abe56037.php 第 303 行.
+NOTIC: [8] Use of undefined constant lock - assumed 'lock' H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a92f1d2922506e26adc7a8e5abe56037.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010359s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010439s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000197s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000320s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000405s ]
+
+[ 2014-11-24T10:53:07+08:00 ] ::1 /tk-xm/usaedu/admin.php/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000487s ]
+SQL: DESCRIBE tp_user [ RunTime:0.002501s ]
+SQL: SELECT `id`,`username`,`login_time`,`login_ip`,`lock`,`login_num`,`rsgtime` FROM `tp_user`  [ RunTime:0.000229s ]
+SQL: DESCRIBE tp_auth_group [ RunTime:0.002927s ]
+NOTIC: [8] Undefined index: mapping_order H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+SQL: SELECT b.* FROM tp_auth_group_access AS a, tp_auth_group AS b WHERE a.group_id = b.id AND a. uid='1' [ RunTime:0.000199s ]
+NOTIC: [8] Undefined index: mapping_order H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+SQL: SELECT b.* FROM tp_auth_group_access AS a, tp_auth_group AS b WHERE a.group_id = b.id AND a. uid='2' [ RunTime:0.000197s ]
+SQL: DESCRIBE tp_auth_group [ RunTime:0.002476s ]
+SQL: SELECT * FROM `tp_auth_group`  [ RunTime:0.000214s ]
+SQL: DESCRIBE tp_auth_rule [ RunTime:0.002513s ]
+SQL: SELECT * FROM `tp_auth_rule` WHERE `id` IN ('3','4','5','6','8','9','11','12','13','14','15','16','1','2','7','10','17','18','19','20')  [ RunTime:0.000295s ]
+SQL: SELECT * FROM `tp_auth_rule`  [ RunTime:0.000180s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000177s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000280s ]
+NOTIC: [8] Undefined variable: meta_title H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a92f1d2922506e26adc7a8e5abe56037.php 第 5 行.
+NOTIC: [8] Use of undefined constant lock - assumed 'lock' H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a92f1d2922506e26adc7a8e5abe56037.php 第 303 行.
+NOTIC: [8] Use of undefined constant lock - assumed 'lock' H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a92f1d2922506e26adc7a8e5abe56037.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010948s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011036s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000193s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000374s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000467s ]
+
+[ 2014-11-24T10:53:26+08:00 ] ::1 /tk-xm/usaedu/admin.php/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000522s ]
+SQL: DESCRIBE tp_user [ RunTime:0.002580s ]
+SQL: SELECT `id`,`username`,`login_time`,`login_ip`,`lock`,`login_num`,`rsgtime` FROM `tp_user`  [ RunTime:0.000215s ]
+SQL: DESCRIBE tp_auth_group [ RunTime:0.002269s ]
+NOTIC: [8] Undefined index: mapping_order H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+SQL: SELECT b.* FROM tp_auth_group_access AS a, tp_auth_group AS b WHERE a.group_id = b.id AND a. uid='1' [ RunTime:0.000229s ]
+NOTIC: [8] Undefined index: mapping_order H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+SQL: SELECT b.* FROM tp_auth_group_access AS a, tp_auth_group AS b WHERE a.group_id = b.id AND a. uid='2' [ RunTime:0.000182s ]
+SQL: DESCRIBE tp_auth_group [ RunTime:0.002235s ]
+SQL: SELECT * FROM `tp_auth_group`  [ RunTime:0.000170s ]
+SQL: DESCRIBE tp_auth_rule [ RunTime:0.002307s ]
+SQL: SELECT * FROM `tp_auth_rule` WHERE `id` IN ('3','4','5','6','8','9','11','12','13','14','15','16','1','2','7','10','17','18','19','20')  [ RunTime:0.000189s ]
+SQL: SELECT * FROM `tp_auth_rule`  [ RunTime:0.000193s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000150s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000239s ]
+NOTIC: [8] Undefined variable: meta_title H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a92f1d2922506e26adc7a8e5abe56037.php 第 5 行.
+NOTIC: [8] Use of undefined constant lock - assumed 'lock' H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a92f1d2922506e26adc7a8e5abe56037.php 第 303 行.
+NOTIC: [8] Use of undefined constant lock - assumed 'lock' H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a92f1d2922506e26adc7a8e5abe56037.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010268s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010345s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000187s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000264s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000372s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000476s ]
+
+[ 2014-11-24T13:41:29+08:00 ] ::1 /tk-xm/usaedu/admin.php/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000427s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000574s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000764s ]
+SQL: DESCRIBE tp_user [ RunTime:0.003126s ]
+SQL: SELECT `id`,`username`,`login_time`,`login_ip`,`lock`,`login_num`,`rsgtime` FROM `tp_user`  [ RunTime:0.000208s ]
+SQL: DESCRIBE tp_auth_group [ RunTime:0.002382s ]
+NOTIC: [8] Undefined index: mapping_order H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+SQL: SELECT b.* FROM tp_auth_group_access AS a, tp_auth_group AS b WHERE a.group_id = b.id AND a. uid='1' [ RunTime:0.000228s ]
+NOTIC: [8] Undefined index: mapping_order H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+SQL: SELECT b.* FROM tp_auth_group_access AS a, tp_auth_group AS b WHERE a.group_id = b.id AND a. uid='2' [ RunTime:0.000226s ]
+SQL: DESCRIBE tp_auth_group [ RunTime:0.002160s ]
+SQL: SELECT * FROM `tp_auth_group`  [ RunTime:0.000120s ]
+SQL: DESCRIBE tp_auth_rule [ RunTime:0.002101s ]
+SQL: SELECT * FROM `tp_auth_rule` WHERE `id` IN ('3','4','5','6','8','9','11','12','13','14','15','16','1','2','7','10','17','18','19','20')  [ RunTime:0.000200s ]
+SQL: SELECT * FROM `tp_auth_rule`  [ RunTime:0.000118s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000148s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000236s ]
+NOTIC: [8] Undefined variable: meta_title H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a92f1d2922506e26adc7a8e5abe56037.php 第 5 行.
+NOTIC: [8] Use of undefined constant lock - assumed 'lock' H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a92f1d2922506e26adc7a8e5abe56037.php 第 303 行.
+NOTIC: [8] Use of undefined constant lock - assumed 'lock' H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a92f1d2922506e26adc7a8e5abe56037.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011045s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011126s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000279s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000437s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000522s ]
+
+[ 2014-11-24T13:41:30+08:00 ] ::1 /tk-xm/usaedu/admin.php/User/addUser.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000448s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000557s ]
+SQL: DESCRIBE tp_auth_group [ RunTime:0.002557s ]
+SQL: SELECT `id`,`title` FROM `tp_auth_group`  [ RunTime:0.000204s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000208s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000331s ]
+NOTIC: [8] Undefined variable: meta_title H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\09755487b22a20bd2324b11c954f129c.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008941s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000187s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000325s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000409s ]
+
+[ 2014-11-24T13:41:32+08:00 ] ::1 /tk-xm/usaedu/admin.php/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000383s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000533s ]
+SQL: DESCRIBE tp_user [ RunTime:0.002545s ]
+SQL: SELECT `id`,`username`,`login_time`,`login_ip`,`lock`,`login_num`,`rsgtime` FROM `tp_user`  [ RunTime:0.000174s ]
+SQL: DESCRIBE tp_auth_group [ RunTime:0.002066s ]
+NOTIC: [8] Undefined index: mapping_order H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+SQL: SELECT b.* FROM tp_auth_group_access AS a, tp_auth_group AS b WHERE a.group_id = b.id AND a. uid='1' [ RunTime:0.000182s ]
+NOTIC: [8] Undefined index: mapping_order H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+SQL: SELECT b.* FROM tp_auth_group_access AS a, tp_auth_group AS b WHERE a.group_id = b.id AND a. uid='2' [ RunTime:0.000163s ]
+SQL: DESCRIBE tp_auth_group [ RunTime:0.002143s ]
+SQL: SELECT * FROM `tp_auth_group`  [ RunTime:0.000167s ]
+SQL: DESCRIBE tp_auth_rule [ RunTime:0.002375s ]
+SQL: SELECT * FROM `tp_auth_rule` WHERE `id` IN ('3','4','5','6','8','9','11','12','13','14','15','16','1','2','7','10','17','18','19','20')  [ RunTime:0.000164s ]
+SQL: SELECT * FROM `tp_auth_rule`  [ RunTime:0.000130s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000150s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000241s ]
+NOTIC: [8] Undefined variable: meta_title H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a92f1d2922506e26adc7a8e5abe56037.php 第 5 行.
+NOTIC: [8] Use of undefined constant lock - assumed 'lock' H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a92f1d2922506e26adc7a8e5abe56037.php 第 303 行.
+NOTIC: [8] Use of undefined constant lock - assumed 'lock' H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a92f1d2922506e26adc7a8e5abe56037.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010342s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010421s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000210s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000287s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000381s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000466s ]
+
+[ 2014-11-24T13:41:34+08:00 ] ::1 /tk-xm/usaedu/admin.php/User/addUser.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000359s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000463s ]
+SQL: DESCRIBE tp_auth_group [ RunTime:0.002971s ]
+SQL: SELECT `id`,`title` FROM `tp_auth_group`  [ RunTime:0.000212s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000240s ]
+NOTIC: [8] Undefined variable: meta_title H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\09755487b22a20bd2324b11c954f129c.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009016s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009120s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000192s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000365s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000448s ]
+
+[ 2014-11-24T15:59:57+08:00 ] ::1 /tk-xm/usaedu/admin.php/User/addUser.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000490s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000580s ]
+SQL: DESCRIBE tp_auth_group [ RunTime:0.002361s ]
+SQL: SELECT `id`,`title` FROM `tp_auth_group`  [ RunTime:0.000122s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000153s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000243s ]
+NOTIC: [8] Undefined variable: meta_title H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\09755487b22a20bd2324b11c954f129c.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009522s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009627s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000399s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000542s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000647s ]
+
+[ 2014-11-24T16:01:08+08:00 ] ::1 /tk-xm/usaedu/admin.php/User/grouplist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000541s ]
+ERR: 非法操作:grouplist
+
+[ 2014-11-24T16:17:46+08:00 ] ::1 /tk-xm/usaedu/admin.php/User/addUser.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000391s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000593s ]
+SQL: DESCRIBE tp_auth_group [ RunTime:0.003141s ]
+SQL: SELECT `id`,`title` FROM `tp_auth_group`  [ RunTime:0.000136s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000139s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000220s ]
+NOTIC: [8] Undefined variable: meta_title H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\09755487b22a20bd2324b11c954f129c.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009103s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009198s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000340s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000418s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000501s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000626s ]
+
+[ 2014-11-24T16:17:47+08:00 ] ::1 /tk-xm/usaedu/admin.php/User/addgroup.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000570s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000185s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000288s ]
+NOTIC: [8] Undefined variable: meta_title H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a50a99c3b1dff54ed3c10737bf653a26.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008789s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008878s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000387s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000480s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000570s ]
+
+[ 2014-11-24T16:17:57+08:00 ] ::1 /tk-xm/usaedu/admin.php/User/addgroup.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000395s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000486s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000591s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000149s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000260s ]
+NOTIC: [8] Undefined variable: meta_title H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a50a99c3b1dff54ed3c10737bf653a26.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008568s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008666s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000345s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000422s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000461s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000559s ]
+
+[ 2014-11-24T16:18:00+08:00 ] ::1 /tk-xm/usaedu/admin.php/User/addgroup.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000570s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000150s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000246s ]
+NOTIC: [8] Undefined variable: meta_title H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a50a99c3b1dff54ed3c10737bf653a26.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008333s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008416s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000464s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000507s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000594s ]
+
+[ 2014-11-24T16:18:01+08:00 ] ::1 /tk-xm/usaedu/admin.php/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000599s ]
+SQL: DESCRIBE tp_user [ RunTime:0.003353s ]
+SQL: SELECT `id`,`username`,`login_time`,`login_ip`,`lock`,`login_num`,`rsgtime` FROM `tp_user`  [ RunTime:0.000202s ]
+SQL: DESCRIBE tp_auth_group [ RunTime:0.002147s ]
+NOTIC: [8] Undefined index: mapping_order H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+SQL: SELECT b.* FROM tp_auth_group_access AS a, tp_auth_group AS b WHERE a.group_id = b.id AND a. uid='1' [ RunTime:0.000216s ]
+NOTIC: [8] Undefined index: mapping_order H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 186 行.
+NOTIC: [8] Undefined index: mapping_limit H:\www\tk-xm\usaedu\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 187 行.
+SQL: SELECT b.* FROM tp_auth_group_access AS a, tp_auth_group AS b WHERE a.group_id = b.id AND a. uid='2' [ RunTime:0.000186s ]
+SQL: DESCRIBE tp_auth_group [ RunTime:0.002058s ]
+SQL: SELECT * FROM `tp_auth_group`  [ RunTime:0.000164s ]
+SQL: DESCRIBE tp_auth_rule [ RunTime:0.002133s ]
+SQL: SELECT * FROM `tp_auth_rule` WHERE `id` IN ('3','4','5','6','8','9','11','12','13','14','15','16','1','2','7','10','17','18','19','20')  [ RunTime:0.000199s ]
+SQL: SELECT * FROM `tp_auth_rule`  [ RunTime:0.000159s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000157s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000237s ]
+NOTIC: [8] Undefined variable: meta_title H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a92f1d2922506e26adc7a8e5abe56037.php 第 5 行.
+NOTIC: [8] Use of undefined constant lock - assumed 'lock' H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a92f1d2922506e26adc7a8e5abe56037.php 第 315 行.
+NOTIC: [8] Use of undefined constant lock - assumed 'lock' H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a92f1d2922506e26adc7a8e5abe56037.php 第 315 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010622s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010704s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000462s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000580s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000677s ]
+
+[ 2014-11-24T16:18:02+08:00 ] ::1 /tk-xm/usaedu/admin.php/User/grouplist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000441s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000604s ]
+SQL: DESCRIBE tp_auth_group [ RunTime:0.002213s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_auth_group` LIMIT 1   [ RunTime:0.000143s ]
+SQL: SELECT * FROM `tp_auth_group` ORDER BY id asc LIMIT 0,10   [ RunTime:0.000236s ]
+SQL: DESCRIBE tp_auth_rule [ RunTime:0.002427s ]
+SQL: SELECT * FROM `tp_auth_rule` WHERE `id` IN ('3','4','5','6','8','9','11','12','13','14','15','16','1','2','7','10','17','18','19','20')  [ RunTime:0.000191s ]
+ERR: 模板不存在:./Apps/Admin/View/User/grouplist.html
+
+[ 2014-11-24T16:19:18+08:00 ] ::1 /tk-xm/usaedu/admin.php/User/addgroup.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000474s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000228s ]
+NOTIC: [8] Undefined variable: meta_title H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\a50a99c3b1dff54ed3c10737bf653a26.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008102s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000352s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000430s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000481s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000585s ]
+
+[ 2014-11-24T16:23:04+08:00 ] ::1 /tk-xm/usaedu/admin.php/User/groupList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000357s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000580s ]
+SQL: DESCRIBE tp_auth_group [ RunTime:0.002509s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_auth_group` LIMIT 1   [ RunTime:0.000173s ]
+SQL: SELECT * FROM `tp_auth_group` ORDER BY id asc LIMIT 0,10   [ RunTime:0.000182s ]
+SQL: DESCRIBE tp_auth_rule [ RunTime:0.002259s ]
+SQL: SELECT * FROM `tp_auth_rule` WHERE `id` IN ('3','4','5','6','8','9','11','12','13','14','15','16','1','2','7','10','17','18','19','20')  [ RunTime:0.000189s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000220s ]
+NOTIC: [8] Undefined variable: meta_title H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\73f28b713f4988eb005abdaee005aea3.php 第 5 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\73f28b713f4988eb005abdaee005aea3.php 第 307 行.
+NOTIC: [8] Undefined variable: r H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\73f28b713f4988eb005abdaee005aea3.php 第 310 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009621s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009707s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000492s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000563s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000658s ]
+
+[ 2014-11-24T16:38:18+08:00 ] ::1 /tk-xm/usaedu/admin.php/User/addGroup.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000517s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000133s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000214s ]
+NOTIC: [8] Undefined variable: meta_title H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\e76dd2ccf9631030a25a46e6db83763a.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008201s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008284s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000385s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000502s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000603s ]
+
+[ 2014-11-24T16:39:04+08:00 ] ::1 /tk-xm/usaedu/admin.php/User/addGroupHandle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000532s ]
+SQL: DESCRIBE tp_auth_group [ RunTime:0.002600s ]
+SQL: SELECT * FROM `tp_auth_group` WHERE `title` = '总编' LIMIT 1   [ RunTime:0.000191s ]
+SQL: INSERT INTO `tp_auth_group` (`title`,`status`) VALUES ('总编',1) [ RunTime:0.000245s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023036s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023185s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000471s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000605s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000470s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000557s ]
+
+[ 2014-11-24T16:39:05+08:00 ] ::1 /tk-xm/usaedu/admin.php/Auth/grouplist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000319s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000553s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000676s ]
+ERR: 无法加载控制器:Auth
+
+[ 2014-11-24T16:39:11+08:00 ] ::1 /tk-xm/usaedu/admin.php/Auth/grouplist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000530s ]
+ERR: 无法加载控制器:Auth
+
+[ 2014-11-24T16:39:15+08:00 ] ::1 /tk-xm/usaedu/admin.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000381s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000600s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+NOTIC: [8] Undefined variable: meta_title H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\859e94050170c96367cb52465a51a945.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007298s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007394s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000385s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000480s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000590s ]
+
+[ 2014-11-24T16:39:16+08:00 ] ::1 /tk-xm/usaedu/admin.php/User/addGroup.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000454s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000549s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000237s ]
+NOTIC: [8] Undefined variable: meta_title H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\e76dd2ccf9631030a25a46e6db83763a.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008619s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008713s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000526s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000433s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000532s ]
+
+[ 2014-11-24T16:39:17+08:00 ] ::1 /tk-xm/usaedu/admin.php/User/groupList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000080s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000565s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000532s ]
+SQL: DESCRIBE tp_auth_group [ RunTime:0.002505s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_auth_group` LIMIT 1   [ RunTime:0.000187s ]
+SQL: SELECT * FROM `tp_auth_group` ORDER BY id asc LIMIT 0,10   [ RunTime:0.000323s ]
+SQL: DESCRIBE tp_auth_rule [ RunTime:0.002458s ]
+SQL: SELECT * FROM `tp_auth_rule` WHERE `id` IN ('3','4','5','6','8','9','11','12','13','14','15','16','1','2','7','10','17','18','19','20')  [ RunTime:0.000293s ]
+SQL: SELECT * FROM `tp_auth_rule` WHERE `id` IN ('')  [ RunTime:0.000163s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000221s ]
+NOTIC: [8] Undefined variable: meta_title H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\73f28b713f4988eb005abdaee005aea3.php 第 5 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\73f28b713f4988eb005abdaee005aea3.php 第 307 行.
+NOTIC: [8] Undefined variable: r H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\73f28b713f4988eb005abdaee005aea3.php 第 310 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\73f28b713f4988eb005abdaee005aea3.php 第 307 行.
+NOTIC: [8] Undefined variable: r H:\www\tk-xm\usaedu\Apps\Runtime\Cache\Admin\73f28b713f4988eb005abdaee005aea3.php 第 310 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009458s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009542s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000413s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000505s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000642s ]
+

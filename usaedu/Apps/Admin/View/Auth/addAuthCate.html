@@ -1,0 +1,55 @@
+<extend name="Public/base"/>
+
+<block name="body">
+	<div class="page-content">
+		<div class="page-header">
+			<h1>
+				权限管理
+				<small>
+					<i class="icon-double-angle-right"></i>
+					 添加权限分类
+				</small>
+			</h1>
+		</div><!-- /.page-header -->
+
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="widget-header widget-header-blue widget-header-flat">
+					<h4 class="lighter">添加权限分类</h4>
+				</div>
+				<div class="widget-body">
+					<div class="widget-main">
+					<form method="post" action="{:U('addAuthCateHandle')}" id="validation-form" class="form-horizontal" novalidate="novalidate">
+						<div class="form-group">
+							<label for="moduleName" class="control-label col-xs-12 col-sm-3 no-padding-right">权限分类名称:</label>
+
+							<div class="col-xs-12 col-sm-9">
+								<div class="clearfix">
+									<input type="text" class="col-xs-12 col-sm-4" id="moduleName" name="moduleName">
+								</div>
+							</div>
+						</div>
+
+						<div class="space-2"></div>
+						
+						<div class="row-fluid wizard-actions">
+							<button data-last="Finish " class="btn btn-success btn-next">
+								保存添加
+							<i class="icon-arrow-right icon-on-right"></i></button>
+						</div>
+					</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</block>
+
+<block name="bootscript">
+
+</block>
+
+<block name="script">
+
+</block>

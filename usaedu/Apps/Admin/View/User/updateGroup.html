@@ -1,0 +1,93 @@
+<extend name="Public/base"/>
+
+<block name="body">
+	<div class="page-content">
+		<div class="page-header">
+			<h1>
+				权限管理
+				<small>
+					<i class="icon-double-angle-right"></i>
+					 用户管理
+				</small>
+				<small>
+					<i class="icon-double-angle-right"></i>
+					 修改用户组
+				</small>
+			</h1>
+		</div><!-- /.page-header -->
+
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="widget-header widget-header-blue widget-header-flat">
+					<h4 class="lighter">添加用户组</h4>
+				</div>
+				<div class="widget-body">
+					<div class="widget-main">
+					<form method="post" action="{:U('updateGroup')}" id="validation-form" class="form-horizontal" novalidate="novalidate">
+						<volist name='group' id='v'>
+						<input type="hidden" name="id" value="{$v['id']}" />
+						<div class="form-group">
+							<label for="name" class="control-label col-xs-12 col-sm-3 no-padding-right">用户组名:</label>
+
+							<div class="col-xs-12 col-sm-9">
+								<div class="clearfix">
+									<input type="text" class="col-xs-12 col-sm-4" id="name" value="{$v['title']}" name="title">
+								</div>
+							</div>
+						</div>
+
+						<div class="hr hr-dotted"></div>
+
+						<div class="form-group">
+							<label class="control-label col-xs-12 col-sm-3 no-padding-right">是否开启用户组:</label>
+
+							<div class="col-xs-12 col-sm-9">
+								<div>
+									<label class="blue">
+										<input type="radio" class="ace" value="1" name="status" <if condition='$v[status] eq 1'>checked='checked'</if> />
+										<span class="lbl"> 开放</span>
+									</label>
+								</div>
+
+								<div>
+									<label class="blue">
+										<input type="radio" class="ace" value="0" name="status" <if condition='$v[status] eq 0'>checked='checked'</if> />
+										<span class="lbl"> 关闭</span>
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="space-2"></div>
+
+						<div class="form-group">
+							<label for="name" class="control-label col-xs-12 col-sm-3 no-padding-right">拥有权限（编号）:</label>
+
+							<div class="col-xs-12 col-sm-9">
+								<div class="clearfix">
+									<input type="text" class="col-xs-12 col-sm-4" id="rule" name="rule" value="{$v.rules}" />
+								</div>
+							</div>
+						</div>					
+						</volist>
+						<div class="row-fluid wizard-actions">
+							<button data-last="Finish " class="btn btn-success btn-next">
+								保存修改
+							<i class="icon-arrow-right icon-on-right"></i></button>
+						</div>
+					</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</block>
+
+<block name="bootscript">
+
+</block>
+
+<block name="script">
+
+</block>

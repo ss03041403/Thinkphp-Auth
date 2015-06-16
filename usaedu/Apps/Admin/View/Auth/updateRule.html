@@ -1,0 +1,116 @@
+<extend name="Public/base"/>
+
+<block name="body">
+	<div class="page-content">
+		<div class="page-header">
+			<h1>
+				权限管理
+				<small>
+					<i class="icon-double-angle-right"></i>
+					 权限列表
+				</small>
+			</h1>
+		</div><!-- /.page-header -->
+
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="widget-header widget-header-blue widget-header-flat">
+					<h4 class="lighter">添加权限</h4>
+				</div>
+				<div class="widget-body">
+					<div class="widget-main">
+					<form method="post" action="{:U('updateRule')}" id="validation-form" class="form-horizontal" novalidate="novalidate">
+						<volist name='rule' id='v'>
+						<input type="hidden" name="id" value="{$v['id']}" />
+						<div class="form-group">
+							<label for="name" class="control-label col-xs-12 col-sm-3 no-padding-right">权限路径:</label>
+
+							<div class="col-xs-12 col-sm-9">
+								<div class="clearfix">
+									<input type="text" class="col-xs-12 col-sm-4" id="name" name="name" value="{$v.name}">
+								</div>
+							</div>
+						</div>
+
+						<div class="space-2"></div>
+
+						<div class="form-group">
+							<label for="title" class="control-label col-xs-12 col-sm-3 no-padding-right">权限名称:</label>
+
+							<div class="col-xs-12 col-sm-9">
+								<div class="clearfix">
+									<input type="text" class="col-xs-12 col-sm-4" id="title" name="title" value="{$v.title}">
+								</div>
+							</div>
+						</div>
+
+						<div class="space-2"></div>
+
+						<div class="form-group">
+							<label for="condition" class="control-label col-xs-12 col-sm-3 no-padding-right">附加条件:</label>
+
+							<div class="col-xs-12 col-sm-9">
+								<div class="clearfix">
+									<input type="text" class="col-xs-12 col-sm-4" id="condition" name="condition" value="{$v.condition}">
+								</div>
+							</div>
+						</div>
+
+						<div class="hr hr-dotted"></div>
+
+						<div class="form-group">
+							<label class="control-label col-xs-12 col-sm-3 no-padding-right">是否锁定用户:</label>
+
+							<div class="col-xs-12 col-sm-9">
+								<div>
+									<label class="blue">
+										<input type="radio" class="ace" value="1" name="status" <if condition='$v[status] eq 1'>checked='checked'</if>>
+										<span class="lbl"> 开启</span>
+									</label>
+								</div>
+
+								<div>
+									<label class="blue">
+										<input type="radio" class="ace" value="0" name="status" <if condition='$v[status] eq 0'>checked='checked'</if>>
+										<span class="lbl"> 关闭</span>
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="space-2"></div>
+
+						<div class="form-group">
+							<label for="platform" class="control-label col-xs-12 col-sm-3 no-padding-right">所属模块:</label>
+							<div class="col-xs-12 col-sm-9">
+								<div class="clearfix">
+									<select name="mid" class="input-medium">
+										<volist name="modules" id="vo">
+											<option value="{$vo['id']}" <if condition='$vo["id"] eq $v["mid"]'>selected="selected"</if>>{$vo['moduleName']}</option>
+										</volist>
+									</select>
+								</div>
+							</div>
+						</div>					
+						</volist>
+						<div class="row-fluid wizard-actions">
+							<button data-last="Finish " class="btn btn-success btn-next">
+								保存修改
+							<i class="icon-arrow-right icon-on-right"></i></button>
+						</div>
+					</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</block>
+
+<block name="bootscript">
+
+</block>
+
+<block name="script">
+
+</block>

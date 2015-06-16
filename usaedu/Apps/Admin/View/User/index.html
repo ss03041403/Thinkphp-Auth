@@ -1,0 +1,161 @@
+<extend name="Public/base"/>
+
+<block name="body">
+<style type="text/css">
+	.table-responsive{ overflow:visible;}
+</style>
+	<div class="page-content">
+		<div class="page-header">
+			<h1>
+				权限管理
+				<small>
+					<i class="icon-double-angle-right"></i>
+					 用户管理
+				</small>
+				<small>
+					<i class="icon-double-angle-right"></i>
+					 查看用户
+				</small>
+			</h1>
+		</div><!-- /.page-header -->
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="table-header">
+					查看用户
+				</div>
+
+				<div class="table-responsive">
+					<table class="table table-striped table-bordered table-hover" id="sample-table-1">
+						<thead>
+							<tr>
+								<th class="center">
+									<label>
+										<input type="checkbox" class="ace" />
+										<span class="lbl"></span>
+									</label>
+								</th>
+								<th>ID</th>
+								<th>用户名</th>
+								<th class="hidden-480"><i class="icon-time bigger-110 hidden-480"></i>上次登陆时间</th>
+								<th class="hidden-480">
+									上次登陆IP
+								</th>
+								<th class="hidden-480"><i class="icon-time bigger-110 hidden-480"></i>注册时间</th>
+								<th>
+									状态
+								</th>
+								<th class="hidden-480">用户所属组别</th>								
+								<th>操作</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<volist name='user' id='v'>
+							<if condition="!in_array($v[id],C('ADMINISTRATOR'))">
+							<tr>
+								<td class="center">
+									<label>
+										<input type="checkbox" class="ace" />
+										<span class="lbl"></span>
+									</label>
+								</td>
+
+								<td>
+									{$v.id}
+								</td>
+								<td>{$v.username}</td>
+								<td class="hidden-480">{$v.login_time|date='Y-m-d H:i', ###}</td>
+								<td class="hidden-480">{$v.login_ip}</td>
+								<td class="hidden-480">{$v.rsgtime|date='Y-m-d H:i', ###}</td>
+								<td>
+									<if condition='$v[lock] eq 1'><a href="{:U('UserLock',array('id'=>$v[id],'lock'=>0),'')}" class="btn btn-minier btn-success">启用中</a><else/><a href="{:U('UserLock',array('id'=>$v[id],'lock'=>1),'')}" class="btn btn-minier btn-danger">禁用</a></if>
+								</td>
+								<td class="hidden-480">
+									<volist name='v.classify' id='r'>
+										{$r.title}
+									</volist>
+								</td>
+								<td>
+									<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+										
+										<a class="green" href="{:U('updateUser',array('id'=>$v['id']))}">
+											<i class="icon-pencil bigger-130"></i>
+										</a>
+
+										<a class="red" href="{:U('delUser',array('id'=>$v['id']))}" onclick='return del();'>
+											<i class="icon-trash bigger-130"></i>
+										</a>
+									</div>
+
+									<div class="visible-xs visible-sm hidden-md hidden-lg">
+										<div class="inline position-relative">
+											<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown">
+												<i class="icon-caret-down icon-only bigger-120"></i>
+											</button>
+
+											<ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+
+												<li>
+													<a href="{:U('updateUser',array('id'=>$v['id']))}" class="tooltip-success" data-rel="tooltip" title="Edit">
+														<span class="green">
+															<i class="icon-edit bigger-120"></i>
+														</span>
+													</a>
+												</li>
+
+												<li>
+													<a href="{:U('delUser',array('id'=>$v['id']))}" class="tooltip-error" data-rel="tooltip" title="Delete" onclick='return del();'>
+														<span class="red">
+															<i class="icon-trash bigger-120"></i>
+														</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</td>
+							</tr>
+							</if>
+							</volist>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</block>
+
+<block name="bootscript">
+	<script src="__STATIC__/assets/js/jquery.dataTables.min.js"></script>
+	<script src="__STATIC__/assets/js/jquery.dataTables.bootstrap.js"></script>
+	<script type="text/javascript">
+	function del()
+	{
+	    if(confirm("确定要删除吗？"))
+	    {
+	        return true;
+	    }
+	    else
+	    {
+	        return false;
+	    }
+	}
+	</script>
+</block>
+
+<block name="script">
+<script type="text/javascript">
+	jQuery(function($) {
+		$('table th input:checkbox').on('click' , function(){
+			var that = this;
+			$(this).closest('table').find('tr > td:first-child input:checkbox')
+			.each(function(){
+				this.checked = that.checked;
+				$(this).closest('tr').toggleClass('selected');
+			});
+				
+		});
+	})
+</script>
+</block>
